@@ -16,14 +16,17 @@ const l = flist.length;
 let count = 0;
 let fsum = 0;
 let fset = new Set();
-let dupe = null;
 
 while (true) {
 	fsum += flist[count];
+
 	if (fset.has(fsum)) {
+		console.log(fsum)
 		break;
+	} else {
+		fset.add(fsum);
 	}
-	fset.add(fsum);
+
 	count++;
 	if (count >= l) count %= l;
 }

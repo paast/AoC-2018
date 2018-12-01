@@ -13,19 +13,18 @@ def main():
 	fsum = 0
 	fset = set({})
 	l = len(flist)
-	i = 0
 
 	while True:
 		fsum += flist[count]
+		
 		if (fsum in fset):
 			print(fsum)
 			break
-		fset.add(fsum)
+		else:
+			fset.add(fsum)
+		
 		count += 1
-		if (count >= l):
-			count %= l
-		i += 1
-	print(i)
+		if (count >= l): count %= l
 
 
 # ~~~~~~~~~~~~~~~~~
