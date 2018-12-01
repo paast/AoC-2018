@@ -16,7 +16,7 @@ const l = flist.length;
 let count = 0;
 let fsum = 0;
 let fset = new Set();
-let dupe = No
+let dupe = null;
 
 while (true) {
 	fsum += flist[count];
