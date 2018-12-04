@@ -41,7 +41,7 @@ def main():
 				map[y][x] += 1
 
 	count = sum([len(list(filter(lambda x: x > 1, l))) for l in map])
-	print(count)
+	print('3.1:  overlap (in^2): {}'.format(count))
 
 	# day 3.2
 	for rect in rect_list:
@@ -52,10 +52,18 @@ def main():
 				x = rect.x + x
 				if (map[y][x] != 1):
 					the_one = False
-		if (the_one): print(rect.id)
+		if (the_one): print('3.2:  id: {}'.format(rect.id))
 
 
 # ~~~~~~~~~~~~~~~~~
 
 if __name__ == "__main__":
 	main()
+
+# concept:
+#	> parse each line into a Rect
+# 	> find map size
+#	> create 2-D array with map size
+#	> fill in rects on map
+#	> find sum of > 1 squares (3.1)
+#	> same thing as fill, but print any rect that never overlaps (3.2)
