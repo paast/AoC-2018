@@ -1,1 +1,1 @@
-✨✨ Python and ~~JavaScript~~ solutions for Advent of Code 2018 ✨✨
+✨✨ Python ~~and JavaScript~~ solutions for Advent of Code 2018 ✨✨
