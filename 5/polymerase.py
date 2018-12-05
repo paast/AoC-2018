@@ -26,7 +26,7 @@ def polymerize(polymer):
 
 		if (is_pair(passed[-1:], monomer)):
 			passed = passed[:-1]
-		elif (is_pair(monomer, polymer[index + 1])):
+		elif (index < len(polymer) - 1 and is_pair(monomer, polymer[index + 1])):
 			skip = True
 		else:
 			passed += monomer
@@ -47,12 +47,12 @@ def main():
 	# 5.2
 	lowest = ('', 50000)
 	for char in string.ascii_lowercase:
-		stripped_polymer = polymer.replace(char, '').replace(char.upper(), '')
+		stripped_polymer = new_polymer.replace(char, '').replace(char.upper(), '')
 		test_polymer = polymerize(stripped_polymer)
 		l = len(test_polymer)
 		if (l < lowest[1]):
 			lowest = (char, l)
-			
+
 	print('5.2:  lowest = {} @ {}'.format(lowest[0], lowest[1]))
 
 
