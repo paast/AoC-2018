@@ -52,6 +52,7 @@ def main():
 		l = len(test_polymer)
 		if (l < lowest[1]):
 			lowest = (char, l)
+			
 	print('5.2:  lowest = {} @ {}'.format(lowest[0], lowest[1]))
 
 
